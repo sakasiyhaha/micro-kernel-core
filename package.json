@@ -1,5 +1,5 @@
 {
-  "name": "@devtools/micro-kernel",
+  "name": "micro-kernel-core",
   "version": "1.0.0",
   "description": "Zero-dependency micro-kernel for extension frameworks (v2.0.0)",
   "type": "module",
