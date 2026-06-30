@@ -1,0 +1,23 @@
+{
+  "name": "micro-kernel-integrated-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "start:basic": "tsx src/index.ts basic",
+    "start:inheritance": "tsx src/index.ts inheritance",
+    "start:fallback": "tsx src/index.ts fallback",
+    "start:permissions": "tsx src/index.ts permissions",
+    "start:observability": "tsx src/index.ts observability",
+    "start:all": "tsx src/index.ts all"
+  },
+  "dependencies": {
+    "@devtools/micro-kernel": "file:../.."
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "tsx": "^4.7.0",
+    "typescript": "^5.0.0"
+  }
+}

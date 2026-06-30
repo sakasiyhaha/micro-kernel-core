@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "noImplicitAny": false,          // 允许隐式 any（简化示例代码）
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "types": ["node"]               // 添加 Node.js 类型支持
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}

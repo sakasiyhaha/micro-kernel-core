@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Micro-Kernel Web Demo</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- 顶栏 -->
+    <header class="app-header">
+      <div class="logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">Micro-Kernel <span class="logo-version">v1.0.0</span></span>
+      </div>
+      <div class="header-status">
+        <span class="status-dot" id="kernel-status-dot"></span>
+        <span id="kernel-status-text">就绪</span>
+      </div>
+    </header>
+
+    <!-- 主体 -->
+    <div class="app-body">
+      <!-- 侧边栏 -->
+      <nav class="sidebar">
+        <ul class="nav-list">
+          <li class="nav-item active" data-demo="basic">
+            <span class="nav-icon">📘</span>
+            基础用法
+          </li>
+          <li class="nav-item" data-demo="inheritance">
+            <span class="nav-icon">🌳</span>
+            继承与覆盖
+          </li>
+          <li class="nav-item" data-demo="fallback">
+            <span class="nav-icon">🛡️</span>
+            降级与容错
+          </li>
+          <li class="nav-item" data-demo="permissions">
+            <span class="nav-icon">🔐</span>
+            权限管理
+          </li>
+          <li class="nav-item" data-demo="observability">
+            <span class="nav-icon">📊</span>
+            可观测性
+          </li>
+        </ul>
+        <div class="sidebar-footer">
+          <button id="btn-reset-kernel" class="btn btn-danger btn-sm">
+            🔄 重置内核
+          </button>
+        </div>
+      </nav>
+
+      <!-- 主内容 -->
+      <main class="main-content">
+        <!-- 控制面板 -->
+        <section class="control-panel">
+          <div class="panel-header">
+            <h2 id="demo-title">📘 基础用法</h2>
+            <div class="panel-actions">
+              <button id="btn-run-demo" class="btn btn-primary">▶ 运行演示</button>
+              <button id="btn-clear-output" class="btn btn-secondary">清空输出</button>
+            </div>
+          </div>
+          <div class="panel-body">
+            <div class="demo-description" id="demo-description">
+              演示内核的创建、扩展注册和执行。
+            </div>
+          </div>
+        </section>
+
+        <!-- 输出区域 -->
+        <section class="output-panel">
+          <div class="panel-header">
+            <h3>📋 输出日志</h3>
+            <span class="output-count" id="output-count">0 条</span>
+          </div>
+          <div class="output-body" id="output-body">
+            <div class="output-placeholder">点击「运行演示」查看结果...</div>
+          </div>
+        </section>
+
+        <!-- 状态监控 -->
+        <section class="status-panel">
+          <div class="panel-header">
+            <h3>📊 内核状态</h3>
+          </div>
+          <div class="status-body" id="status-body">
+            <div class="status-item">
+              <span class="status-label">扩展点</span>
+              <span class="status-value" id="stat-points">0</span>
+            </div>
+            <div class="status-item">
+              <span class="status-label">实现数</span>
+              <span class="status-value" id="stat-impls">0</span>
+            </div>
+            <div class="status-item">
+              <span class="status-label">依赖图节点</span>
+              <span class="status-value" id="stat-nodes">0</span>
+            </div>
+            <div class="status-item">
+              <span class="status-label">依赖图边</span>
+              <span class="status-value" id="stat-edges">0</span>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
